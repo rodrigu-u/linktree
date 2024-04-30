@@ -8,7 +8,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(assets/bg-mobile.jpg);
+  --bg-url: url(./assets/bg-mobile.jpg);
   --border-color: rgba(255, 255, 255, 0.5);
   --btn-bg-color: rgba(255, 255, 255, 0.1);
   --btn-bg-color-hover: rgba(0, 0, 0, 0.05);
@@ -18,7 +18,7 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(assets/bg-mobile-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --border-color: rgba(0, 0, 0, 0.5);
   --btn-bg-color: rgba(0, 0, 0, 0.05);
   --btn-bg-color-hover: rgba(0, 0, 0, 0.02);
@@ -78,11 +78,15 @@ body {
   top: 50%;
   left: 0;
   z-index: 1;
+  animation: slide-back 0.4s;
+}
+
+#darkmode button:hover {
+  outline: 8px solid var(--btn-bg-color);
 }
 
 .light #darkmode button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 #darkmode span {
@@ -157,10 +161,28 @@ footer a {
 
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(.assets/bg-desktop.jpg);
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
 
   .light {
-    --bg-url: url(.assets/bg-desktop-light.jpg);
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
