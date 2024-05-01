@@ -18,7 +18,7 @@ Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnolog
 <br>
 
 <p align="center">
-  <img alt="projeto linktree" src=".github/preview.jpg" width="100%">
+  <img alt="projeto linktree" src="./assets/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
